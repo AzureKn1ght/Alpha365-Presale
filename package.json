@@ -1,0 +1,30 @@
+{
+  "name": "beekeeping-miner",
+  "version": "1.0.0",
+  "description": "https://github.com/AzureKn1ght/Presale-Sniper-Bot",
+  "main": "arkfi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AzureKn1ght/Presale-Sniper-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AzureKn1ght/Presale-Sniper-Bot/issues"
+  },
+  "homepage": "https://github.com/AzureKn1ght/Presale-Sniper-Bot#readme",
+  "devDependencies": {
+    "eslint": "^8.26.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "figlet": "^1.5.2",
+    "node-schedule": "^2.1.0",
+    "nodemailer": "^6.8.0"
+  }
+}
