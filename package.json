@@ -1,8 +1,8 @@
 {
-  "name": "beekeeping-miner",
+  "name": "presale-sniper",
   "version": "1.0.0",
   "description": "https://github.com/AzureKn1ght/Presale-Sniper-Bot",
-  "main": "arkfi.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
