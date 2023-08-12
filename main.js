@@ -124,12 +124,14 @@ const snipeWallet = async (wallet, ref, tries) => {
 
     while (!presaleStarted) {
       // keep checking if Round 2 of presale is open
-      presaleStarted = await connection.contract.roundOpen(2);
+      presaleStarted = await connection.contract.start();
       await delay(3); // 3 sec blocktime of bsc
     }
 
-    // call the presale mint() function and await results
-    const result = await connection.contract.mint(1, ref);
+    // need to approve BUSD spend beforehand
+    // call the buyPresale2() and await results
+    const amt = ethers.utils.parseEther("100");
+    const result = await connection.contract.buyPresale2(amt, ref);
     const receipt = await result.wait();
 
     // succeeded
@@ -202,13 +204,8 @@ const todayDate = () => {
 // Presale Dat Function
 const presaleStartDate = async (index) => {
   try {
-    // just initialize connection
-    const wallets = initWallets(1);
-    const connection = await connect(wallets[0]);
-
-    // get the start date of the presale from the contract
-    const response = await connection.contract.openingHour(index);
-    const time = Math.max(response, 1668790800);
+    // hard coded start time, not onchain
+    const time = Math.max(0, 1691848861);
     const startDate = new Date(time * 1000);
     console.log(
       startDate.toLocaleString("en-GB", { timeZone: "Asia/Singapore" })
