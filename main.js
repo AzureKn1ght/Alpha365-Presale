@@ -205,7 +205,7 @@ const todayDate = () => {
 const presaleStartDate = async (index) => {
   try {
     // hard coded start time, not onchain
-    const time = Math.max(0, 1691848861);
+    const time = Math.max(0, 1691935261);
     const startDate = new Date(time * 1000);
     console.log(
       startDate.toLocaleString("en-GB", { timeZone: "Asia/Singapore" })
